@@ -1,0 +1,9 @@
+#PBS -N compareTexts
+#PBS -A UT-TNEDU002
+#PBS -j oe
+#PBS -q batch
+#PBS -l walltime=10:00,size=36
+cd $PBS_O_WORKDIR
+date
+time aprun -n 36 ./compareTexts bookNames.dat
+
